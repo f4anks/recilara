@@ -17,6 +17,29 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
       rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <style>
+      /* Estilos para el texto del carrusel en pantallas pequeñas */
+      @media (max-width: 767.98px) {
+          .carousel-caption h1 {
+              font-size: 1.8rem !important; /* Más pequeño para teléfonos */
+          }
+          .carousel-caption h4 {
+              font-size: 0.9rem !important; /* Más pequeño para teléfonos */
+          }
+          .carousel-caption {
+              padding-bottom: 20px; /* Ajusta el padding para que el texto no se corte */
+          }
+      }
+      /* Estilos para tabletas y pantallas medianas */
+      @media (min-width: 768px) and (max-width: 991.98px) {
+          .carousel-caption h1 {
+              font-size: 2.5rem !important;
+          }
+          .carousel-caption h4 {
+              font-size: 1.1rem !important;
+          }
+      }
+    </style>
   </head>
   <body>
     <div class="container-fluid bg-light pt-3 d-none d-lg-block">
@@ -27,12 +50,13 @@
             <p class="text-body px-3 mb-0">|</p>
             <p class="mb-0"><i class="fa fa-phone-alt mr-2"></i>+058 0426-0001122</p>
           </div>
-          <div class="d-inline-flex align-items-center"> <a class="text-primary px-3"
-              href="#"><i class="fab fa-facebook-f"></i></a> <a class="text-primary px-3"
-              href="#"><i class="fab fa-twitter"></i></a> <a class="text-primary px-3"
-              href="#"><i class="fab fa-linkedin-in"></i></a> <a class="text-primary px-3"
-              href="#"><i class="fab fa-instagram"></i></a> <a class="text-primary pl-3"
-              href="#"><i class="fab fa-youtube"></i></a> </div>
+          <div class="d-inline-flex align-items-center"> 
+            <a class="text-primary px-3" href="#"><i class="fab fa-facebook-f"></i></a> 
+            <a class="text-primary px-3" href="#"><i class="fab fa-twitter"></i></a> 
+            <a class="text-primary px-3" href="#"><i class="fab fa-linkedin-in"></i></a> 
+            <a class="text-primary px-3" href="#"><i class="fab fa-instagram"></i></a> 
+            <a class="text-primary pl-3" href="#"><i class="fab fa-youtube"></i></a> 
+          </div>
         </div>
       </div>
     </div>
@@ -73,9 +97,9 @@
             <img class="w-100" src="img/carousel-1.jpg" alt="Reciclaje en Lara">
             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
               <div class="p-3" style="max-width: 900px;">
-                <h4 class="text-white text-uppercase mb-md-3">Empresa Larense de
+                <h4 class="text-white text-uppercase mb-md-2" style="letter-spacing: 5px;">Empresa Larense de
                   Reciclaje y Gestión Ambiental</h4>
-                <h1 class="display-3 text-white mb-md-4">RECILARA: Hacemos de
+                <h1 class="display-4 text-white mb-md-3">RECILARA: Hacemos de
                   Lara un lugar más verde.</h1>
               </div>
             </div>
@@ -84,9 +108,9 @@
             <img class="w-100" src="img/carousel-2.jpg" alt="Gestión de Desechos Sólidos">
             <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
               <div class="p-3" style="max-width: 900px;">
-                <h4 class="text-white text-uppercase mb-md-3">Soluciones
+                 <h4 class="text-white text-uppercase mb-md-2" style="letter-spacing: 5px;">Soluciones
                   Integrales para Empresas y Comunidades</h4>
-                <h1 class="display-3 text-white mb-md-4">Tu aliado confiable en
+                 <h1 class="display-4 text-white mb-md-3">Tu aliado confiable en
                   la Economía Circular.</h1>
               </div>
             </div>
@@ -195,8 +219,7 @@
     </div>
     <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
       <div class="row pt-5">
-        
-        <div class="col-lg-3 col-md-6 mb-5">
+        <div class="col-lg-3 col-md-6 mb-5"> 
           <a href="index.html" class="navbar-brand">
             <h1 class="text-primary"><span class="text-white">RECI</span>LARA</h1>
           </a>
@@ -209,20 +232,18 @@
             <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a> 
           </div>
         </div>
-        
         <div class="col-lg-3 col-md-6 mb-5">
           <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">ENLACES RÁPIDOS</h5>
           <div class="d-flex flex-column justify-content-start"> 
             <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Nosotros</a> 
             <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Centros de Acopio</a>
-            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Nuestros Servicios</a> 
+            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Nuestros Servicios</a>
             <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Solicitudes</a>
-            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guías y Recursos</a> 
+            <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Guías y Recursos</a>
             <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Testimonios</a>
             <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Blog</a>
           </div>
         </div>
-        
         <div class="col-lg-3 col-md-6 mb-5">
           <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">CONTÁCTANOS</h5>
           <p><i class="fa fa-map-marker-alt mr-2"></i>Ubicación en Barquisimeto, Lara</p>
@@ -246,10 +267,11 @@
         <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
           <p class="m-0 text-white-50">Copyright © Recilara. Todos los derechos
             reservados. </p>
+        </div>
+        <div class="col-lg-6 text-center text-md-right">
           <p class="m-0 text-white-50">Diseñado por <a href="#">sistematikos -
               Frank Hernandez</a> </p>
         </div>
-        <div class="col-lg-6 text-center text-md-right"></div>
       </div>
     </div>
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
