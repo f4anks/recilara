@@ -1,87 +1,150 @@
+/* PROYECTO: RECILARA - Gestión Ambiental
+   PALETA DE COLORES: Verdes Ecológicos y Grises Profesionales
+*/
+
 :root {
-    --primary: #5BC35B;       /* Verde RECILARA */
-    --primary-dark: #4aad4a;
-    --dark-bg: #1e2b3e;       /* Azul muy oscuro para contraste (Texto/Footer) */
-    --light-gray: #f8f9fa;
+    --primary: #5BC35B;       /* Verde RECILARA Principal */
+    --primary-dark: #4aad4a;   /* Verde para Hovers */
+    --primary-light: #eef9ee;  /* Verde muy claro para fondos de iconos */
+    --dark-bg: #1e2b3e;        /* Azul muy oscuro (casi negro) para contraste en Footer */
+    --text-dark: #2c3e50;      /* Gris oscuro para títulos */
+    --text-muted: #6c757d;     /* Gris para descripciones */
     --glass: rgba(255, 255, 255, 0.95);
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #ffffff;
-    color: #444;
+    color: var(--text-dark);
+    line-height: 1.6;
 }
 
-/* Navbar */
+/* --- NAVBAR MINIMALISTA --- */
 #appNavbar {
     background: var(--glass);
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
 }
 
 .text-primary { color: var(--primary) !important; }
 
-/* Hero / Banners */
+/* --- BANNER PRINCIPAL (HERO) --- */
 .carousel-item {
     height: 85vh;
     background-size: cover;
     background-position: center;
+    position: relative;
 }
 
-.mt-n5 { margin-top: -4rem !important; }
+/* Capa de contraste para asegurar legibilidad */
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Oscurece un poco la imagen */
+}
 
-/* Cards y Features */
-.icon-box {
-    width: 60px;
-    height: 60px;
-    background: #eef9ee;
-    color: var(--primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    font-size: 1.5rem;
+.carousel-caption {
+    z-index: 2;
+    padding-bottom: 10vh;
+}
+
+.carousel-caption h1 {
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    font-weight: 800;
+}
+
+/* --- SECCIÓN DE VALOR (CARDS FLOTANTES) --- */
+.mt-n5 {
+    margin-top: -5rem !important; /* Hace que las cards suban sobre el banner */
 }
 
 .feature-card {
-    transition: transform 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: none !important;
 }
 
 .feature-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
 }
 
-/* Botones */
-.btn-primary {
-    background-color: var(--primary);
-    border-color: var(--primary);
+.icon-box {
+    width: 70px;
+    height: 70px;
+    background: var(--primary-light);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 1.8rem;
+    transition: 0.3s;
 }
 
-.btn-primary:hover {
-    background-color: var(--primary-dark);
-    border-color: var(--primary-dark);
-    transform: scale(1.05);
+.feature-card:hover .icon-box {
+    background: var(--primary);
+    color: #fff;
 }
 
-/* Service Boxes */
+/* --- SERVICIOS --- */
 .service-box {
     transition: all 0.3s ease;
+    border: 1px solid #eee !important;
     position: relative;
     overflow: hidden;
+    z-index: 1;
+}
+
+.service-box i {
+    transition: all 0.3s ease;
 }
 
 .service-box:hover {
     background: var(--primary) !important;
     border-color: var(--primary) !important;
+    transform: scale(1.02);
 }
 
 .service-box:hover h4, 
 .service-box:hover p, 
 .service-box:hover i {
-    color: #fff !important;
+    color: #ffffff !important;
 }
 
-/* Footer Navegación */
+/* --- BOTONES --- */
+.btn-primary {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    padding: 12px 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(91, 195, 91, 0.3);
+}
+
+.btn-outline-light:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--dark-bg) !important;
+}
+
 .footer-links li {
     margin-bottom: 12px;
 }
@@ -95,7 +158,7 @@ body {
 
 .footer-links a:hover {
     color: var(--primary);
-    padding-left: 8px;
+    padding-left: 10px;
 }
 
 .nav-active {
@@ -103,24 +166,44 @@ body {
     font-weight: 600;
 }
 
-/* Botón flotante */
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+/* --- BACK TO TOP --- */
 .back-to-top {
     position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 45px;
-    height: 45px;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
     background: var(--primary);
     color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 99;
+    z-index: 999;
     text-decoration: none;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    opacity: 0.8;
 }
 
 .back-to-top:hover {
-    background: var(--dark-bg);
+    opacity: 1;
+    transform: scale(1.1);
+    color: #fff;
+}
+
+/* --- RESPONSIVIDAD --- */
+@media (max-width: 768px) {
+    .carousel-item { height: 60vh; }
+    .display-3 { font-size: 2.5rem; }
+    .mt-n5 { margin-top: -2rem !important; }
 }
