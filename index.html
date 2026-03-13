@@ -2,13 +2,16 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RECILARA | Green Tech & Circular Economy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>RECILARA | Gestión Ambiental App</title>
     
-    <meta name="theme-color" content="#2dce89">
+    <meta name="theme-color" content="#5BC35B">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="manifest" href="manifest.json">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -16,70 +19,152 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg fixed-top shadow-sm" id="mainNav">
+    <div class="topbar d-none d-lg-block py-2 bg-light border-bottom">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="small text-muted">
+                <i class="fa fa-envelope text-primary me-2"></i>@recilara_oficial
+                <span class="mx-3">|</span>
+                <i class="fa fa-phone-alt text-primary me-2"></i>+058 0426-0001122
+            </div>
+            <div class="social-links">
+                <a href="#" class="text-primary me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-primary me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-primary me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-primary"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top shadow-sm" id="appNavbar">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <span class="fw-bold text-success">RECI</span><span class="fw-light">LARA</span>
+            <a class="navbar-brand fw-bold" href="index.html">
+                <span class="text-primary">RECI</span><span class="text-dark">LARA</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link px-3" href="#">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#servicios">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-success btn-sm ms-lg-3 px-4 rounded-pill text-white" href="#contacto">Solicitar Guía</a></li>
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav ms-auto py-3 py-lg-0 align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.html">Servicios</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Recursos</a>
+                        <ul class="dropdown-menu border-0 shadow-lg">
+                            <li><a class="dropdown-item" href="blog.html">Blog Ambiental</a></li>
+                            <li><a class="dropdown-item" href="destination.html">Centros de Acopio</a></li>
+                            <li><a class="dropdown-item" href="guide.html">Guías</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-primary rounded-pill px-4 shadow-sm" href="contact.html">Contáctanos</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="hero-section d-flex align-items-center text-center">
-        <div class="container" data-aos="fade-up">
-            <h4 class="text-uppercase text-success fw-bold mb-3" style="letter-spacing: 3px;">Economía Circular en Lara</h4>
-            <h1 class="display-3 fw-bold mb-4">Transformamos Desechos en <br><span class="text-gradient">Futuro Sostenible</span></h1>
-            <p class="lead mb-5 opacity-75">Soluciones inteligentes en gestión ambiental para empresas que lideran el cambio.</p>
-            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-                <a href="#servicios" class="btn btn-primary btn-lg px-5 py-3 rounded-pill shadow">Nuestra Tecnología</a>
-                <a href="#" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill">Ver Impacto</a>
+    <header id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/carousel-1.jpg');">
+                <div class="carousel-caption d-flex h-100 align-items-center justify-content-center">
+                    <div class="text-center" data-aos="fade-up">
+                        <h4 class="text-uppercase text-primary fw-bold mb-3" style="letter-spacing: 4px;">Empresa Larense</h4>
+                        <h1 class="display-3 fw-bold mb-4">Lara más Verde <br>con RECILARA</h1>
+                        <a href="#servicios" class="btn btn-lg btn-primary rounded-pill px-5 py-3">Empezar Ahora</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/carousel-2.jpg');">
+                <div class="carousel-caption d-flex h-100 align-items-center justify-content-center">
+                    <div class="text-center">
+                        <h4 class="text-uppercase text-primary fw-bold mb-3" style="letter-spacing: 4px;">Economía Circular</h4>
+                        <h1 class="display-3 fw-bold mb-4">Tu aliado confiable en Gestión Ambiental</h1>
+                        <a href="service.html" class="btn btn-lg btn-outline-light rounded-pill px-5 py-3">Ver Soluciones</a>
+                    </div>
+                </div>
             </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
     </header>
 
-    <section class="py-5 bg-white">
+    <section class="py-5 mt-n5 position-relative z-index-2">
         <div class="container">
-            <div class="row text-center g-4">
-                <div class="col-6 col-md-3" data-aos="zoom-in">
-                    <h2 class="fw-bold text-success">+500T</h2>
-                    <p class="text-muted small">Material Procesado</p>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card shadow-lg p-4 bg-white rounded-4 text-center">
+                        <div class="icon-box bg-primary-soft mb-3 mx-auto">
+                            <i class="fa fa-check-circle text-primary"></i>
+                        </div>
+                        <h5 class="fw-bold">Legalidad Total</h5>
+                        <p class="text-muted small mb-0">Operamos bajo normativas ambientales estrictas.</p>
+                    </div>
                 </div>
-                <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="100">
-                    <h2 class="fw-bold text-success">100%</h2>
-                    <p class="text-muted small">Legalidad Ambiental</p>
                 </div>
-                <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="200">
-                    <h2 class="fw-bold text-success">+120</h2>
-                    <p class="text-muted small">Empresas Aliadas</p>
+        </div>
+    </section>
+
+    <section id="servicios" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h6 class="text-primary fw-bold text-uppercase">Gestión Digital</h6>
+                <h2 class="display-5 fw-bold">Servicios a un Click</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in">
+                    <div class="service-app-card text-center p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fa fa-file-alt"></i>
+                        </div>
+                        <h4>Recaudos</h4>
+                        <p>Consigna documentos y gestiona tus citas fácilmente.</p>
+                        <a href="#" class="stretched-link"></a>
+                    </div>
                 </div>
-                <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="300">
-                    <h2 class="fw-bold text-success">Lara</h2>
-                    <p class="text-muted small">Sede Principal</p>
+                </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white-50 pt-5 pb-3">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <h2 class="text-primary fw-bold mb-4">RECILARA</h2>
+                    <p>Referentes en el reciclaje y la gestión ambiental en el Estado Lara. Innovación para un planeta sano.</p>
+                    <div class="d-flex gap-2 mt-4">
+                        <a href="#" class="btn btn-sm btn-outline-primary rounded-circle"><i class="fab fa-instagram"></i></a>
+                        </div>
+                </div>
+                </div>
+            <hr class="my-5 border-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="small">&copy; 2026 RECILARA. Lara, Venezuela.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small">Powered by <a href="#" class="text-primary text-decoration-none">sistematikos</a></p>
                 </div>
             </div>
         </div>
-    </section>
+    </footer>
+
+    <a href="#" class="back-to-top shadow"><i class="fa fa-chevron-up"></i></a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1000, once: true });
+        AOS.init({ duration: 800, once: true });
         
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
-                document.getElementById('mainNav').classList.add('nav-scrolled');
-            } else {
-                document.getElementById('mainNav').classList.remove('nav-scrolled');
-            }
+        // Efecto scroll en Navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('appNavbar');
+            if (window.scrollY > 50) nav.classList.add('nav-scrolled', 'shadow');
+            else nav.classList.remove('nav-scrolled', 'shadow');
         });
     </script>
 </body>
