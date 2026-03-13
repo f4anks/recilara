@@ -1,312 +1,161 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <title>RECILARA | Gestión Ambiental y Reciclaje en Lara</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Recilara, Reciclaje, Lara, Desechos Solidos, Gestión Ambiental, Barquisimeto" name="keywords">
-    <meta content="Empresa Larense de Reciclaje y Gestión Ambiental de Desechos Sólidos, enfocados en la economía circular y la sostenibilidad." name="description">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>RECILARA | Gestión Ambiental</title>
     
     <meta name="theme-color" content="#5BC35B">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="manifest" href="manifest.json">
     <link rel="icon" href="img/favicon.ico">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    
-    <link href="css/style.css" rel="stylesheet">
-    
-    <style>
-      @media (max-width: 767.98px) {
-          .carousel-caption h1 {
-              font-size: 1.8rem !important; /* Más pequeño para teléfonos */
-          }
-          .carousel-caption h4 {
-              font-size: 0.9rem !important; /* Más pequeño para teléfonos */
-          }
-          .carousel-caption {
-              padding-bottom: 20px; /* Ajusta el padding para que el texto no se corte */
-          }
-      }
-      @media (min-width: 768px) and (max-width: 991.98px) {
-          .carousel-caption h1 {
-              font-size: 2.5rem !important;
-          }
-          .carousel-caption h4 {
-              font-size: 1.1rem !important;
-          }
-      }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container-fluid bg-light pt-3 d-none d-lg-block">
-      <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="d-inline-flex align-items-center">
-            <p class="mb-0"><i class="fa fa-envelope text-primary me-2"></i>@recilara_oficial</p>
-            <p class="text-body px-3 mb-0">|</p>
-            <p class="mb-0"><i class="fa fa-phone-alt text-primary me-2"></i>+058 0426-0001122</p>
-          </div>
-          <div class="d-inline-flex align-items-center"> 
-            <a class="text-primary px-3 social-icon" href="#"><i class="fab fa-facebook-f"></i></a> 
-            <a class="text-primary px-3 social-icon" href="#"><i class="fab fa-twitter"></i></a> 
-            <a class="text-primary px-3 social-icon" href="#"><i class="fab fa-linkedin-in"></i></a> 
-            <a class="text-primary px-3 social-icon" href="#"><i class="fab fa-instagram"></i></a> 
-            <a class="text-primary pl-3 social-icon" href="#"><i class="fab fa-youtube"></i></a> 
-          </div>
+
+    <nav class="navbar navbar-light sticky-top shadow-sm py-3" id="appNavbar">
+        <div class="container justify-content-center">
+            <a class="navbar-brand fw-bold m-0" href="index.html">
+                <span class="text-primary">RECI</span><span class="text-dark">LARA</span>
+            </a>
         </div>
-      </div>
-    </div>
-    <div class="container-fluid position-relative nav-bar p-0">
-      <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
-        <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-1 py-lg-0 pl-3 pl-lg-5">
-          <a href="index.html" class="navbar-brand">
-            <h1 class="m-0 text-primary"><span class="text-dark">RECI</span>LARA</h1>
-          </a> 
-          <button type="button" class="navbar-toggler centrar-toggler" data-toggle="collapse"
-            data-target="#navbarCollapse"> <span class="navbar-toggler-icon centrar-icono-toggler"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
-            <div class="navbar-nav ml-auto py-0 text-center"> 
-              <a href="index.html" class="nav-item nav-link active">Home</a>
-              <a href="about.html" class="nav-item nav-link">Nosotros</a> 
-              <a href="service.html" class="nav-item nav-link">Servicios</a> 
-              <a href="package.html" class="nav-item nav-link">Solicitudes</a>
-              <div class="nav-item dropdown"> 
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Recursos</a>
-                <div class="dropdown-menu border-0 rounded-0 m-0 shadow-lg dropdown-compacto text-center"> 
-                  <a href="blog.html" class="dropdown-item">Blog Ambiental</a> 
-                  <a href="destination.html" class="dropdown-item">Centros de Acopio</a> 
-                  <a href="guide.html" class="dropdown-item">Guías de Reciclaje</a> 
-                  <a href="testimonial.html" class="dropdown-item">Testimonios</a> 
-                </div>
-              </div> 
-              <a href="contact.html" class="nav-item nav-link">Contactanos</a> 
-            </div>
-          </div>
-        </nav>
-      </div>
-    </div>
-    <header id="heroCarousel" class="carousel slide carousel-fade p-0" data-bs-ride="carousel">
+    </nav>
+
+    <header id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/carousel-1.jpg');">
+            <div class="carousel-item active" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=2070&auto=format&fit=crop');">
                 <div class="carousel-caption d-flex h-100 align-items-center justify-content-center">
-                    <div class="text-center" data-aos="fade-up">
-                        <h4 class="text-uppercase text-primary fw-bold mb-3" style="letter-spacing: 4px;">Empresa Larense</h4>
-                        <h1 class="display-3 fw-bold mb-4">Lara más Verde <br>con RECILARA</h1>
-                        <a href="#servicios" class="btn btn-lg btn-primary rounded-pill px-5 py-3 shadow">Empezar Ahora</a>
+                    <div class="text-center" data-aos="zoom-in">
+                        <h4 class="text-uppercase text-primary fw-bold mb-3" style="letter-spacing: 4px;">Lara, Venezuela</h4>
+                        <h1 class="display-3 fw-bold mb-4 text-white">Hacemos de Lara <br>un lugar más verde</h1>
+                        <p class="lead text-white mb-5 d-none d-md-block">Soluciones integrales en gestión de desechos y economía circular.</p>
+                        <a href="#servicios" class="btn btn-primary rounded-pill px-5 py-3 fw-bold shadow">CONOCER MÁS</a>
                     </div>
                 </div>
             </div>
-            <div class="carousel-item" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/carousel-2.jpg');">
+            <div class="carousel-item" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=2013&auto=format&fit=crop');">
                 <div class="carousel-caption d-flex h-100 align-items-center justify-content-center">
                     <div class="text-center">
                         <h4 class="text-uppercase text-primary fw-bold mb-3" style="letter-spacing: 4px;">Economía Circular</h4>
-                        <h1 class="display-3 fw-bold mb-4">Tu aliado confiable en Gestión Ambiental</h1>
-                        <a href="service.html" class="btn btn-lg btn-outline-light rounded-pill px-5 py-3 shadow">Ver Soluciones</a>
+                        <h1 class="display-3 fw-bold mb-4 text-white">Tu aliado en <br>Sostenibilidad Ambiental</h1>
+                        <a href="#servicios" class="btn btn-outline-light rounded-pill px-5 py-3 fw-bold">NUESTROS SERVICIOS</a>
                     </div>
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
     </header>
-    <div class="container-fluid pb-5 feature-compacto">
-      <div class="container pb-5">
-        <div class="row justify-content-center">
-          
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-            <div class="d-flex mb-4 mb-lg-0 p-2 feature-card rounded-4 shadow-sm bg-white">
-              <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary-soft mr-2 rounded-icon-box"
-                style="height: 70px; width: 70px;"> 
-                <i class="fa fa-2x fa-check-circle text-primary"></i>
-              </div>
-              <div class="d-flex flex-column justify-content-center text-compacto">
-                <h5 class="mb-1 title-compacto" style="font-size: 1rem;">Transparencia y Legalidad</h5>
-                <p class="m-0 desc-compacto" style="font-size: 0.8rem;">Operamos bajo
-                  normativas ambientales, garantizando el manejo ético.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-            <div class="d-flex mb-4 mb-lg-0 p-2 feature-card rounded-4 shadow-sm bg-white">
-              <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary-soft mr-2 rounded-icon-box"
-                style="height: 70px; width: 70px;"> 
-                <i class="fa fa-2x fa-leaf text-primary"></i>
-              </div>
-              <div class="d-flex flex-column justify-content-center text-compacto">
-                <h5 class="mb-1 title-compacto" style="font-size: 1rem;">Compromiso con Lara</h5>
-                <p class="m-0 desc-compacto" style="font-size: 0.8rem;">Mejoramos la calidad
-                  de vida y el ambiente de nuestra región.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-            <div class="d-flex mb-4 mb-lg-0 p-2 feature-card rounded-4 shadow-sm bg-white">
-              <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary-soft mr-2 rounded-icon-box"
-                style="height: 70px; width: 70px;"> 
-                <i class="fa fa-2x fa-cogs text-primary"></i>
-              </div>
-              <div class="d-flex flex-column justify-content-center text-compacto">
-                <h5 class="mb-1 title-compacto" style="font-size: 1rem;">Tecnología y Procesos</h5>
-                <p class="m-0 desc-compacto" style="font-size: 0.8rem;">Utilizamos equipos
-                  eficientes para el procesamiento de desechos.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid py-5 bg-light service-compacto">
-      <div class="container pt-5 pb-3">
-        <div class="text-center mb-5 pb-3" data-aos="fade-up">
-          <h6 class="text-primary text-uppercase title-service-prefix" style="letter-spacing: 5px;">Nuestros
-            Servicios</h6>
-          <h1 class="display-5 fw-bold title-service-compacto">Simplificando tu Gestión Ambiental</h1>
-        </div>
-        <div class="row justify-content-center align-items-start service-row-compacto">
-          
-          <div class="col-lg-3 col-md-3 col-sm-6 mb-3 mb-lg-0 p-1 service-col-compacto">
-            <div class="service-item bg-white text-center mb-2 py-3 px-2 rounded-4 shadow-sm service-app-card transition-all position-relative"> 
-              <i class="fa fa-2x fa-file-alt mx-auto mb-1 service-icon text-primary"
-                style="font-size: 1.5rem;"></i>
-              <h5 class="mb-1 service-title-compacto" style="font-size: 1rem;">Ingreso de Recaudos</h5>
-              <p class="m-0 text-muted service-desc-compacto" style="font-size: 0.8rem;">Consigna documentos y
-                establece tu cita de entrega/recolección.</p>
-                <a href="#" class="stretched-link"></a>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-3 col-sm-6 mb-3 mb-lg-0 p-1 service-col-compacto">
-            <div class="service-item bg-white text-center mb-2 py-3 px-2 rounded-4 shadow-sm service-app-card transition-all position-relative"> 
-              <i class="fa fa-2x fa-sync-alt mx-auto mb-1 service-icon text-primary"
-                style="font-size: 1.5rem;"></i>
-              <h5 class="mb-1 service-title-compacto" style="font-size: 1rem;">Renovación de Permisos</h5>
-              <p class="m-0 text-muted service-desc-compacto" style="font-size: 0.8rem;">Actualiza tus requisitos
-                y licencias para mantenerte operativo.</p>
-                <a href="#" class="stretched-link"></a>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-3 col-sm-6 mb-3 mb-lg-0 p-1 service-col-compacto">
-            <div class="service-item bg-white text-center mb-2 py-3 px-2 rounded-4 shadow-sm service-app-card transition-all position-relative"> 
-              <i class="fa fa-2x fa-truck-moving mx-auto mb-1 service-icon text-primary"
-                style="font-size: 1.5rem;"></i>
-              <h5 class="mb-1 service-title-compacto" style="font-size: 1rem;">Solicitud de Guías</h5>
-              <p class="m-0 text-muted service-desc-compacto" style="font-size: 0.8rem;">Solicita guías para la
-                movilización y Transporte legal de material.</p>
-                <a href="#" class="stretched-link"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <footer class="bg-dark text-white-50 py-5 px-sm-3 px-lg-5 footer-moderno" style="margin-top: 90px;">
-      <div class="container footer-content-moderno">
-        <div class="row pt-5 footer-row-moderno">
-          
-          <div class="col-lg-3 col-md-6 mb-5 footer-col-moderno">
-            <a href="index.html" class="navbar-brand footer-logo-moderno">
-              <h1 class="text-primary footer-logo-title"><span class="text-white">RECI</span>LARA</h1>
-            </a>
-            <p class="footer-desc-moderno">Emp. Larense de Reciclaje y Gestión Integral de Desechos. Innovación para un planeta sano.</p>
-            <h6 class="text-white text-uppercase mt-4 mb-3 footer-social-title" style="letter-spacing: 5px;">SÍGUENOS</h6>
-            <div class="d-flex justify-content-start footer-social-links"> 
-              <a class="btn btn-sm btn-outline-primary rounded-circle footer-social-icon me-2" href="#"><i class="fab fa-twitter"></i></a> 
-              <a class="btn btn-sm btn-outline-primary rounded-circle footer-social-icon me-2" href="#"><i class="fab fa-facebook-f"></i></a> 
-              <a class="btn btn-sm btn-outline-primary rounded-circle footer-social-icon me-2" href="#"><i class="fab fa-linkedin-in"></i></a> 
-              <a class="btn btn-sm btn-outline-primary rounded-circle footer-social-icon me-2" href="#"><i class="fab fa-instagram"></i></a> 
-              <a class="btn btn-sm btn-outline-primary rounded-circle footer-social-icon" href="#"><i class="fab fa-youtube"></i></a> 
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-6 mb-5 footer-col-moderno">
-            <h5 class="text-white text-uppercase mb-4 footer-section-title" style="letter-spacing: 5px;">ENLACES RÁPIDOS</h5>
-            <div class="d-flex flex-column justify-content-start footer-links"> 
-              <a class="text-white-50 mb-2 footer-link" href="#"><i class="fa fa-angle-right me-2 footer-link-icon"></i>Nosotros</a> 
-              <a class="text-white-50 mb-2 footer-link" href="#"><i class="fa fa-angle-right me-2 footer-link-icon"></i>Centros de Acopio</a>
-              <a class="text-white-50 mb-2 footer-link" href="#"><i class="fa fa-angle-right me-2 footer-link-icon"></i>Nuestros Servicios</a>
-              <a class="text-white-50 mb-2 footer-link" href="#"><i class="fa fa-angle-right me-2 footer-link-icon"></i>Solicitudes</a>
-              <a class="text-white-50 mb-2 footer-link" href="#"><i class="fa fa-angle-right me-2 footer-link-icon"></i>Guías y Recursos</a>
-              <a class="text-white-50 mb-2 footer-link" href="#"><i class="fa fa-angle-right me-2 footer-link-icon"></i>Testimonios</a>
-              <a class="text-white-50 footer-link" href="#"><i class="fa fa-angle-right me-2 footer-link-icon"></i>Blog</a>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-6 mb-5 footer-col-moderno">
-            <h5 class="text-white text-uppercase mb-4 footer-section-title" style="letter-spacing: 5px;">CONTÁCTANOS</h5>
-            <p class="footer-contact-moderno"><i class="fa fa-map-marker-alt text-primary me-2 footer-contact-icon"></i>Ubicación en Barquisimeto, Lara</p>
-            <p class="footer-contact-moderno"><i class="fa fa-phone-alt text-primary me-2 footer-contact-icon"></i>+58 0426-0001122</p>
-            <p class="footer-contact-moderno"><i class="fa fa-envelope text-primary me-2 footer-contact-icon"></i>info@recilara.com</p>
-            <h6 class="text-white text-uppercase mt-4 mb-3 footer-newsletter-title" style="letter-spacing: 5px;">BOLETÍN</h6>
-            <div class="w-100 footer-newsletter-moderno">
-              <div class="input-group"> 
-                <input class="form-control border-light newsletter-input" style="padding: 25px;" placeholder="Tu Email" type="text">
-                <div class="input-group-append"> 
-                  <button class="btn btn-primary px-3 newsletter-btn rounded-pill-newsletter">Suscribirse</button>
+
+    <section class="container mt-n5 position-relative z-index-2 pb-5">
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                <div class="feature-card shadow-lg p-4 bg-white rounded-4 text-center border-bottom border-primary border-4">
+                    <div class="icon-box mb-3 mx-auto"><i class="fa fa-leaf"></i></div>
+                    <h5 class="fw-bold">Compromiso Real</h5>
+                    <p class="text-muted small">Mejoramos la calidad de vida y el ambiente de nuestra región.</p>
                 </div>
-              </div>
             </div>
-          </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="feature-card shadow-lg p-4 bg-white rounded-4 text-center border-bottom border-primary border-4">
+                    <div class="icon-box mb-3 mx-auto"><i class="fa fa-shield-alt"></i></div>
+                    <h5 class="fw-bold">Legalidad</h5>
+                    <p class="text-muted small">Operamos bajo todas las normativas ambientales vigentes.</p>
+                </div>
+            </div>
         </div>
-        <hr class="my-5 border-secondary footer-separator-moderno">
-        <div class="row footer-bottom-moderno">
-          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0 footer-copyright-moderno">
-            <p class="m-0 text-white-50 small footer-copyright-text">Copyright &copy; 2026 RECILARA. Lara, Venezuela. Todos los derechos reservados.</p>
-          </div>
-          <div class="col-md-6 text-center text-md-end footer-design-moderno">
-            <p class="m-0 text-white-50 small footer-design-text">Powered by <a href="#" class="text-primary text-decoration-none footer-design-link">sistematikos - Frank Hernandez</a></p>
-          </div>
+    </section>
+
+    <section id="servicios" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase">Gestión Digital</h6>
+                <h2 class="display-5 fw-bold text-dark">Servicios Disponibles</h2>
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-lg-4 col-md-6" data-aos="flip-left">
+                    <div class="service-box p-5 bg-white rounded-4 shadow-sm border">
+                        <i class="fa fa-file-invoice fs-1 text-primary mb-3"></i>
+                        <h4 class="fw-bold">Recaudos</h4>
+                        <p class="text-muted small">Gestión de documentos para recolección.</p>
+                        <a href="service.html" class="stretched-link"></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="100">
+                    <div class="service-box p-5 bg-white rounded-4 shadow-sm border">
+                        <i class="fa fa-truck-loading fs-1 text-primary mb-3"></i>
+                        <h4 class="fw-bold">Guías</h4>
+                        <p class="text-muted small">Solicitud de guías de movilización legal.</p>
+                        <a href="package.html" class="stretched-link"></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="200">
+                    <div class="service-box p-5 bg-white rounded-4 shadow-sm border">
+                        <i class="fa fa-certificate fs-1 text-primary mb-3"></i>
+                        <h4 class="fw-bold">Permisos</h4>
+                        <p class="text-muted small">Renovación y actualización de licencias.</p>
+                        <a href="service.html" class="stretched-link"></a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <h2 class="text-primary fw-bold mb-3">RECILARA</h2>
+                    <p class="text-white-50">Liderando la gestión integral de desechos sólidos en Lara mediante tecnología y compromiso ambiental.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="btn btn-outline-primary btn-sm rounded-circle"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-primary btn-sm rounded-circle"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="btn btn-outline-primary btn-sm rounded-circle"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="text-uppercase fw-bold mb-4 ps-3 border-start border-primary border-4">Mapa del Sitio</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html" class="nav-active"><i class="fa fa-chevron-right me-2"></i>Inicio</a></li>
+                        <li><a href="about.html"><i class="fa fa-chevron-right me-2"></i>Sobre Nosotros</a></li>
+                        <li><a href="service.html"><i class="fa fa-chevron-right me-2"></i>Nuestros Servicios</a></li>
+                        <li><a href="destination.html"><i class="fa fa-chevron-right me-2"></i>Centros de Acopio</a></li>
+                        <li><a href="blog.html"><i class="fa fa-chevron-right me-2"></i>Blog Ambiental</a></li>
+                        <li><a href="contact.html"><i class="fa fa-chevron-right me-2"></i>Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="text-uppercase fw-bold mb-4 ps-3 border-start border-primary border-4">Contacto Directo</h5>
+                    <p class="small mb-2"><i class="fa fa-map-marker-alt text-primary me-2"></i> Barquisimeto, Edo. Lara</p>
+                    <p class="small mb-2"><i class="fa fa-phone-alt text-primary me-2"></i> +58 0426-0001122</p>
+                    <p class="small mb-4"><i class="fa fa-envelope text-primary me-2"></i> @recilara_oficial</p>
+                    <a href="package.html" class="btn btn-primary rounded-pill w-100 fw-bold shadow-sm">SOLICITAR TRÁMITE</a>
+                </div>
+            </div>
+            <hr class="my-5 border-secondary">
+            <div class="row small text-white-50">
+                <div class="col-md-6 text-center text-md-start">
+                    <p>&copy; 2026 RECILARA. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p>Diseñado por <span class="text-primary fw-bold">Sistematikos</span></p>
+                </div>
+            </div>
+        </div>
     </footer>
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top shadow-sm rounded-circle"><i class="fa fa-chevron-up"></i></a>
-    
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+    <a href="#" class="back-to-top shadow"><i class="fa fa-chevron-up"></i></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        $(document).ready(function() {
-            // Inicialización de AOS para animaciones de entrada profesional.
-            AOS.init({ duration: 800, once: true });
-            
-            // Inicialización forzada del carrusel de Bootstrap.
-            $('#heroCarousel').carousel({
-                interval: 5000,
-                pause: 'hover'
-            });
-
-            // Lógica para el botón 'Back to Top' (Verde Estilo App)
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 100) {
-                    $('.back-to-top').fadeIn('slow');
-                } else {
-                    $('.back-to-top').fadeOut('slow');
-                }
-            });
-            $('.back-to-top').click(function () {
-                $('html, body').animate({scrollTop: 0}, 500, 'swing');
-                return false;
-            });
-
-            // Inicialización de Navbar Sticky
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 100) {
-                    $('.nav-bar').addClass('sticky-top nav-scrolled shadow');
-                } else {
-                    $('.nav-bar').removeClass('sticky-top nav-scrolled shadow');
-                }
-            });
+        AOS.init({ duration: 1000, once: true });
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('appNavbar');
+            if (window.scrollY > 50) nav.classList.add('py-2', 'bg-white');
+            else nav.classList.remove('py-2', 'bg-white');
         });
     </script>
 </body>
