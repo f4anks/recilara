@@ -1,313 +1,375 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <title>RECILARA | Gestión Ambiental y Reciclaje en Lara</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Recilara, Reciclaje, Lara, Desechos Solidos, Gestión Ambiental, Barquisimeto" name="keywords">
-    <meta content="Empresa Larense de Reciclaje y Gestión Ambiental de Desechos Sólidos, enfocados en la economía circular y la sostenibilidad." name="description">
-    
-    <meta name="theme-color" content="#5BC35B">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="manifest" href="manifest.json">
-    <link rel="icon" href="img/favicon.ico">
+/******* Bootstrap Theming & Variables - REEMPLAZO DE AZUL POR VERDE *******/
+:root {
+  /* Paleta de Recilara - Verdes */
+  --primary: #5BC35B;        /* Verde ecológico y moderno (Sustituye al azul de Bootstrap) */
+  --primary-dark: #4aad4a;   /* Para hover */
+  --secondary: #F8F9FA;      /* Gris Muy Claro */
+  --light: #FFFFFF;          /* Blanco */
+  --dark: #1E2B3E;           /* Azul oscuro/gris oscuro para contraste y contraste, no es el azul primario */
+  --text-color: #656565;     /* Color de texto principal */
+  
+  /* Tipografía Poppins */
+  --font-family-sans-serif: "Poppins", sans-serif;
+  
+  /* Efecto Glassmorphism */
+  --glass: rgba(255, 255, 255, 0.9);
+}
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    
-    <link href="css/style.css" rel="stylesheet">
-    
-    <style>
-      @media (max-width: 767.98px) {
-          .carousel-caption h1 {
-              font-size: 1.8rem !important; /* Más pequeño para teléfonos */
-          }
-          .carousel-caption h4 {
-              font-size: 0.9rem !important; /* Más pequeño para teléfonos */
-          }
-          .carousel-caption {
-              padding-bottom: 20px; /* Ajusta el padding para que el texto no se corte */
-          }
-      }
-      @media (min-width: 768px) and (max-width: 991.98px) {
-          .carousel-caption h1 {
-              font-size: 2.5rem !important;
-          }
-          .carousel-caption h4 {
-              font-size: 1.1rem !important;
-          }
-      }
-    </style>
-</head>
-<body>
-    <div class="container-fluid bg-light pt-3 d-none d-lg-block">
-      <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="d-inline-flex align-items-center">
-            <p class="mb-0"><i class="fa fa-envelope text-primary me-2"></i>@recilara_oficial</p>
-            <p class="text-body px-3 mb-0">|</p>
-            <p class="mb-0"><i class="fa fa-phone-alt text-primary me-2"></i>+058 0426-0001122</p>
-          </div>
-          <div class="d-inline-flex align-items-center"> 
-            <a class="text-primary px-3 social-icon" href="#"><i class="fab fa-facebook-f"></i></a> 
-            <a class="text-primary px-3 social-icon" href="#"><i class="fab fa-twitter"></i></a> 
-            <a class="text-primary px-3 social-icon" href="#"><i class="fab fa-linkedin-in"></i></a> 
-            <a class="text-primary px-3 social-icon" href="#"><i class="fab fa-instagram"></i></a> 
-            <a class="text-primary pl-3 social-icon" href="#"><i class="fab fa-youtube"></i></a> 
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid position-relative nav-bar p-0">
-      <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
-        <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-1 py-lg-0 pl-3 pl-lg-5">
-          <a href="index.html" class="navbar-brand">
-            <h1 class="m-0 text-primary"><span class="text-dark">RECI</span>LARA</h1>
-          </a> 
-          <button type="button" class="navbar-toggler centrar-toggler" data-toggle="collapse"
-            data-target="#navbarCollapse"> <span class="navbar-toggler-icon centrar-icono-toggler"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
-            <div class="navbar-nav ml-auto py-0 text-center"> 
-              <a href="index.html" class="nav-item nav-link active">Home</a>
-              <a href="about.html" class="nav-item nav-link">Nosotros</a> 
-              <a href="service.html" class="nav-item nav-link">Servicios</a> 
-              <a href="package.html" class="nav-item nav-link">Solicitudes</a>
-              <div class="nav-item dropdown"> 
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Recursos</a>
-                <div class="dropdown-menu border-0 rounded-0 m-0 shadow-lg dropdown-compacto text-center"> 
-                  <a href="blog.html" class="dropdown-item">Blog Ambiental</a> 
-                  <a href="destination.html" class="dropdown-item">Centros de Acopio</a> 
-                  <a href="guide.html" class="dropdown-item">Guías de Reciclaje</a> 
-                  <a href="testimonial.html" class="dropdown-item">Testimonios</a> 
-                </div>
-              </div> 
-              <a href="contact.html" class="nav-item nav-link">Contactanos</a> 
-            </div>
-          </div>
-        </nav>
-      </div>
-    </div>
-    <header id="heroCarousel" class="carousel slide carousel-fade p-0" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/carousel-1.jpg');">
-                <div class="carousel-caption d-flex h-100 align-items-center justify-content-center">
-                    <div class="text-center" data-aos="fade-up">
-                        <h4 class="text-uppercase text-primary fw-bold mb-3" style="letter-spacing: 4px;">Empresa Larense</h4>
-                        <h1 class="display-3 fw-bold mb-4">Lara más Verde <br>con RECILARA</h1>
-                        <a href="#servicios" class="btn btn-lg btn-primary rounded-pill px-5 py-3 shadow">Empezar Ahora</a>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/carousel-2.jpg');">
-                <div class="carousel-caption d-flex h-100 align-items-center justify-content-center">
-                    <div class="text-center">
-                        <h4 class="text-uppercase text-primary fw-bold mb-3" style="letter-spacing: 4px;">Economía Circular</h4>
-                        <h1 class="display-3 fw-bold mb-4">Tu aliado confiable en Gestión Ambiental</h1>
-                        <a href="service.html" class="btn btn-lg btn-outline-light rounded-pill px-5 py-3 shadow">Ver Soluciones</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
-    </header>
-    <div class="container-fluid pb-5 feature-compacto">
-      <div class="container pb-5">
-        <div class="row justify-content-center">
-          
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-            <div class="d-flex mb-4 mb-lg-0 p-2 feature-card rounded-4 shadow-sm bg-white">
-              <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary-soft mr-2 rounded-icon-box"
-                style="height: 70px; width: 70px;"> 
-                <i class="fa fa-2x fa-check-circle text-primary"></i>
-              </div>
-              <div class="d-flex flex-column justify-content-center text-compacto">
-                <h5 class="mb-1 title-compacto" style="font-size: 1rem;">Transparencia y Legalidad</h5>
-                <p class="m-0 desc-compacto" style="font-size: 0.8rem;">Operamos bajo
-                  normativas ambientales, garantizando el manejo ético.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-            <div class="d-flex mb-4 mb-lg-0 p-2 feature-card rounded-4 shadow-sm bg-white">
-              <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary-soft mr-2 rounded-icon-box"
-                style="height: 70px; width: 70px;"> 
-                <i class="fa fa-2x fa-leaf text-primary"></i>
-              </div>
-              <div class="d-flex flex-column justify-content-center text-compacto">
-                <h5 class="mb-1 title-compacto" style="font-size: 1rem;">Compromiso con Lara</h5>
-                <p class="m-0 desc-compacto" style="font-size: 0.8rem;">Mejoramos la calidad
-                  de vida y el ambiente de nuestra región.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-            <div class="d-flex mb-4 mb-lg-0 p-2 feature-card rounded-4 shadow-sm bg-white">
-              <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary-soft mr-2 rounded-icon-box"
-                style="height: 70px; width: 70px;"> 
-                <i class="fa fa-2x fa-cogs text-primary"></i>
-              </div>
-              <div class="d-flex flex-column justify-content-center text-compacto">
-                <h5 class="mb-1 title-compacto" style="font-size: 1rem;">Tecnología y Procesos</h5>
-                <p class="m-0 desc-compacto" style="font-size: 0.8rem;">Utilizamos equipos
-                  eficientes para el procesamiento de desechos.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid py-5 bg-light service-compacto">
-      <div class="container pt-5 pb-3">
-        <div class="text-center mb-5 pb-3" data-aos="fade-up">
-          <h6 class="text-primary text-uppercase title-service-prefix" style="letter-spacing: 5px;">Nuestros
-            Servicios</h6>
-          <h1 class="display-5 fw-bold title-service-compacto">Simplificando tu Gestión Ambiental</h1>
-        </div>
-        <div class="row justify-content-center align-items-start service-row-compacto">
-          
-          <div class="col-lg-3 col-md-3 col-sm-6 mb-3 mb-lg-0 p-1 service-col-compacto">
-            <div class="service-item bg-white text-center mb-2 py-3 px-2 rounded-4 shadow-sm service-app-card transition-all position-relative"> 
-              <i class="fa fa-2x fa-file-alt mx-auto mb-1 service-icon text-primary"
-                style="font-size: 1.5rem;"></i>
-              <h5 class="mb-1 service-title-compacto" style="font-size: 1rem;">Ingreso de Recaudos</h5>
-              <p class="m-0 text-muted service-desc-compacto" style="font-size: 0.8rem;">Consigna documentos y
-                establece tu cita de entrega/recolección.</p>
-                <a href="#" class="stretched-link"></a>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-3 col-sm-6 mb-3 mb-lg-0 p-1 service-col-compacto">
-            <div class="service-item bg-white text-center mb-2 py-3 px-2 rounded-4 shadow-sm service-app-card transition-all position-relative"> 
-              <i class="fa fa-2x fa-sync-alt mx-auto mb-1 service-icon text-primary"
-                style="font-size: 1.5rem;"></i>
-              <h5 class="mb-1 service-title-compacto" style="font-size: 1rem;">Renovación de Permisos</h5>
-              <p class="m-0 text-muted service-desc-compacto" style="font-size: 0.8rem;">Actualiza tus requisitos
-                y licencias para mantenerte operativo.</p>
-                <a href="#" class="stretched-link"></a>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-3 col-sm-6 mb-3 mb-lg-0 p-1 service-col-compacto">
-            <div class="service-item bg-white text-center mb-2 py-3 px-2 rounded-4 shadow-sm service-app-card transition-all position-relative"> 
-              <i class="fa fa-2x fa-truck-moving mx-auto mb-1 service-icon text-primary"
-                style="font-size: 1.5rem;"></i>
-              <h5 class="mb-1 service-title-compacto" style="font-size: 1rem;">Solicitud de Guías</h5>
-              <p class="m-0 text-muted service-desc-compacto" style="font-size: 0.8rem;">Solicita guías para la
-                movilización y Transporte legal de material.</p>
-                <a href="#" class="stretched-link"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <footer class="bg-dark text-white-50 py-5 px-sm-3 px-lg-5 footer-moderno" style="margin-top: 90px;">
-      <div class="container footer-content-moderno">
-        <div class="row pt-5 footer-row-moderno">
-          
-          <div class="col-lg-3 col-md-6 mb-5 footer-col-moderno">
-            <a href="index.html" class="navbar-brand footer-logo-moderno">
-              <h1 class="text-primary footer-logo-title"><span class="text-white">RECI</span>LARA</h1>
-            </a>
-            <p class="footer-desc-moderno">Emp. Larense de Reciclaje y Gestión Integral de Desechos. Innovación para un planeta sano.</p>
-            <h6 class="text-white text-uppercase mt-4 mb-3 footer-social-title" style="letter-spacing: 5px;">SÍGUENOS</h6>
-            <div class="d-flex justify-content-start footer-social-links"> 
-              <a class="btn btn-sm btn-outline-primary rounded-circle footer-social-icon me-2" href="#"><i class="fab fa-twitter"></i></a> 
-              <a class="btn btn-sm btn-outline-primary rounded-circle footer-social-icon me-2" href="#"><i class="fab fa-facebook-f"></i></a> 
-              <a class="btn btn-sm btn-outline-primary rounded-circle footer-social-icon me-2" href="#"><i class="fab fa-linkedin-in"></i></a> 
-              <a class="btn btn-sm btn-outline-primary rounded-circle footer-social-icon me-2" href="#"><i class="fab fa-instagram"></i></a> 
-              <a class="btn btn-sm btn-outline-primary rounded-circle footer-social-icon" href="#"><i class="fab fa-youtube"></i></a> 
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-6 mb-5 footer-col-moderno">
-            <h5 class="text-white text-uppercase mb-4 footer-section-title" style="letter-spacing: 5px;">ENLACES RÁPIDOS</h5>
-            <div class="d-flex flex-column justify-content-start footer-links"> 
-              <a class="text-white-50 mb-2 footer-link" href="#"><i class="fa fa-angle-right me-2 footer-link-icon"></i>Nosotros</a> 
-              <a class="text-white-50 mb-2 footer-link" href="#"><i class="fa fa-angle-right me-2 footer-link-icon"></i>Centros de Acopio</a>
-              <a class="text-white-50 mb-2 footer-link" href="#"><i class="fa fa-angle-right me-2 footer-link-icon"></i>Nuestros Servicios</a>
-              <a class="text-white-50 mb-2 footer-link" href="#"><i class="fa fa-angle-right me-2 footer-link-icon"></i>Solicitudes</a>
-              <a class="text-white-50 mb-2 footer-link" href="#"><i class="fa fa-angle-right me-2 footer-link-icon"></i>Guías y Recursos</a>
-              <a class="text-white-50 mb-2 footer-link" href="#"><i class="fa fa-angle-right me-2 footer-link-icon"></i>Testimonios</a>
-              <a class="text-white-50 footer-link" href="#"><i class="fa fa-angle-right me-2 footer-link-icon"></i>Blog</a>
-            </div>
-          </div>
-          
-          <div class="col-lg-3 col-md-6 mb-5 footer-col-moderno">
-            <h5 class="text-white text-uppercase mb-4 footer-section-title" style="letter-spacing: 5px;">CONTÁCTANOS</h5>
-            <p class="footer-contact-moderno"><i class="fa fa-map-marker-alt text-primary me-2 footer-contact-icon"></i>Ubicación en Barquisimeto, Lara</p>
-            <p class="footer-contact-moderno"><i class="fa fa-phone-alt text-primary me-2 footer-contact-icon"></i>+58 0426-0001122</p>
-            <p class="footer-contact-moderno"><i class="fa fa-envelope text-primary me-2 footer-contact-icon"></i>info@recilara.com</p>
-            <h6 class="text-white text-uppercase mt-4 mb-3 footer-newsletter-title" style="letter-spacing: 5px;">BOLETÍN</h6>
-            <div class="w-100 footer-newsletter-moderno">
-              <div class="input-group"> 
-                <input class="form-control border-light newsletter-input" style="padding: 25px;" placeholder="Tu Email" type="text">
-                <div class="input-group-append"> 
-                  <button class="btn btn-primary px-3 newsletter-btn rounded-pill-newsletter">Suscribirse</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <hr class="my-5 border-secondary footer-separator-moderno">
-        <div class="row footer-bottom-moderno">
-          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0 footer-copyright-moderno">
-            <p class="m-0 text-white-50 small footer-copyright-text">Copyright &copy; 2026 RECILARA. Lara, Venezuela. Todos los derechos reservados.</p>
-          </div>
-          <div class="col-md-6 text-center text-md-end footer-design-moderno">
-            <p class="m-0 text-white-50 small footer-design-text">Powered by <a href="#" class="text-primary text-decoration-none footer-design-link">sistematikos - Frank Hernandez</a></p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top shadow-sm rounded-circle"><i class="fa fa-chevron-up"></i></a>
-    
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        $(document).ready(function() {
-            // Inicialización de AOS para animaciones de entrada profesional.
-            AOS.init({ duration: 800, once: true });
-            
-            // Inicialización forzada del carrusel de Bootstrap.
-            $('#heroCarousel').carousel({
-                interval: 5000,
-                pause: 'hover'
-            });
+/* Base Global Mobile-First */
+body {
+  margin: 0;
+  font-family: var(--font-family-sans-serif);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: #F3F3F3;
+  overflow-x: hidden;
+}
 
-            // Lógica para el botón 'Back to Top' (Verde Estilo App)
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 100) {
-                    $('.back-to-top').fadeIn('slow');
-                } else {
-                    $('.back-to-top').fadeOut('slow');
-                }
-            });
-            $('.back-to-top').click(function () {
-                $('html, body').animate({scrollTop: 0}, 500, 'swing');
-                return false;
-            });
+/* Tipografía y Encabezados */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out, background-color 0.3s;
+}
 
-            // Inicialización de Navbar Sticky
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 100) {
-                    $('.nav-bar').addClass('sticky-top nav-scrolled shadow');
-                } else {
-                    $('.nav-bar').removeClass('sticky-top nav-scrolled shadow');
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+a:hover {
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--dark);
+}
+
+/* Colores de Utilidad de Bootstrap Redefinidos a Verde */
+.bg-primary { background-color: var(--primary) !important; }
+.text-primary { color: var(--primary) !important; }
+.bg-dark { background-color: var(--dark) !important; }
+
+/* 1. Topbar: Verde y Limpio */
+.topbar {
+    border-bottom-color: #eeeeee !important;
+}
+
+.topbar .text-primary {
+    color: var(--primary) !important;
+}
+
+.topbar .social-icon {
+    color: var(--primary) !important;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.topbar .social-icon:hover {
+    transform: scale(1.1);
+    color: var(--primary-dark) !important;
+}
+
+/* 2. Navbar Estilo App: Verde, Compacto y Mobile-First */
+#appNavbar, .nav-bar {
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    transition: all 0.4s ease;
+    padding: 1rem 0;
+}
+
+.nav-bar.sticky-top, .nav-scrolled {
+    padding: 0.5rem 0 !important;
+    background: var(--glass) !important;
+}
+
+.navbar-brand h1 {
+    font-weight: 800 !important;
+    letter-spacing: 1px;
+}
+
+.navbar .nav-link {
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 8px 15px !important; 
+    color: var(--dark) !important; 
+    transition: color 0.3s ease-in-out, background-color 0.3s;
+    font-size: 0.95rem; 
+}
+
+@media (min-width: 992px) {
+    .nav-bar .nav-item .nav-link {
+        padding: 20px 15px !important; /* Compactar más en desktop */
+    }
+}
+
+.navbar .nav-item .nav-link:hover,
+.navbar .nav-item .nav-link.active {
+    color: var(--primary) !important; 
+}
+
+/* Forzar centrado del toggler y icono */
+.navbar-toggler, .centrar-toggler {
+    padding: 5px !important; 
+    border: none !important;
+    outline: none !important;
+}
+
+.navbar-toggler-icon, .centrar-icono-toggler {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Dropdowns Compactos Verde */
+.dropdown-compacto {
+    margin-top: 0;
+    border: none;
+    border-radius: 0;
+    background-color: var(--glass);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-compacto .dropdown-item {
+    padding: 8px 15px;
+    color: var(--dark); 
+    font-size: 0.9rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown-compacto .dropdown-item:hover,
+.dropdown-compacto .dropdown-item:focus { 
+    color: var(--primary) !important; 
+    background-color: var(--secondary) !important; 
+}
+
+/* 3. Hero / Carousel: Pantalla Completa y Leyenda Responsiva */
+.carousel-item {
+    height: 90vh; /* Mantener pantalla completa de Mobile-First */
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.4); 
+    border-radius: 8px;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.carousel-caption h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-weight: 800;
+}
+
+/* Controles del Carrusel (Estilo Moderno Verde) */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 15%;
+}
+
+.carousel-control-prev div,
+.carousel-control-next div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--dark);
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.carousel-control-prev:hover div,
+.carousel-control-next:hover div {
+    background: var(--primary);
+}
+
+/* 4. Botones: Persuasivos y Redondeados Verde */
+.btn-primary {
+    padding: 12px 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    box-shadow: 0 4px 12px rgba(122, 183, 48, 0.4);
+}
+
+.btn-outline-light {
+    border-radius: 50px;
+    padding: 12px 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* 5. Features y Servicios: Compactación Forzada y Atractivo Visual */
+.feature-compacto, .service-compacto {
+    pb-5; /* Bootstrap pt-5, pb-5 */
+}
+
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 4px solid transparent;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+}
+
+.icon-box, .rounded-icon-box {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: #eef9ee; /* Fondo suave para ícono */
+    font-size: 1.5rem;
+}
+
+.bg-primary-soft { background-color: #eef9ee; }
+
+.text-compacto {
+    font-size: 0.8rem;
+}
+
+.title-compacto { font-size: 1rem; }
+.desc-compacto { font-size: 0.8rem; }
+
+/* Compactación de Servicios */
+.service-compacto h2, .title-service-compacto { font-size: 2rem; }
+
+.service-item, .service-app-card {
+    transition: all 0.3s ease-in-out;
+    height: 100%;
+    position: relative;
+    border: 1px solid #eee;
+    border-bottom: 4px solid transparent;
+}
+
+.service-item i, .service-icon {
+    transition: .3s;
+}
+
+.service-item:hover, .service-app-card:hover {
+    border-color: var(--primary) !important;
+    background-color: var(--primary) !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .1) !important;
+}
+
+.service-item:hover i, .service-app-card:hover i,
+.service-item:hover h5, .service-app-card:hover h5,
+.service-item:hover p, .service-app-card:hover p {
+    color: white !important;
+}
+
+.stretched-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Compactación Interna de Servicios */
+.py-3.px-2.rounded-4.shadow-sm.service-app-card {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+}
+
+.service-icon.text-primary {
+    margin-bottom: 0.5rem !important;
+}
+
+.service-title-compacto { font-size: 1rem; }
+.service-desc-compacto { font-size: 0.8rem; }
+
+/* 6. Footer Profesional y Verde */
+.footer-moderno {
+    margin-top: 90px; /* Bootstrap mt-90px */
+}
+
+.footer-logo-title, .footer-section-title, .footer-social-title, .footer-newsletter-title {
+    color: white !important;
+    font-weight: 600;
+}
+
+.footer-logo-title .text-primary {
+    color: var(--primary) !important;
+}
+
+.footer-desc-moderno, .footer-link, .footer-contact-moderno, .footer-copyright-text, .footer-design-text {
+    color: rgba(256, 256, 256, .7) !important;
+    font-size: 0.9rem;
+}
+
+.footer-link:hover, .footer-design-link:hover {
+    color: var(--primary) !important;
+}
+
+.footer-social-icon {
+    color: rgba(256, 256, 256, .7) !important;
+    border-color: rgba(256, 256, 256, .7) !important;
+    transition: all 0.3s ease;
+}
+
+.footer-social-icon:hover {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: white !important;
+}
+
+.footer-newsletter-moderno .newsletter-input {
+    background-color: rgba(256, 256, 256, .1);
+    color: white;
+    border: none;
+    font-size: 0.9rem;
+}
+
+.footer-newsletter-moderno .newsletter-btn {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    padding: 10px 20px !important;
+    font-size: 0.9rem;
+}
+
+.footer-newsletter-moderno .rounded-pill-newsletter {
+    border-radius: 50px;
+}
+
+/* 7. Back to Top Button style app */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.back-to-top:hover {
+    background-color: var(--dark);
+    transform: scale(1.1);
+}
